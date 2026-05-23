@@ -15,7 +15,7 @@ export default function Navbar({ activeTab, setActiveTab, onJoinVault }: NavbarP
     { id: 'explore', label: 'Recipes' },
     { id: 'meal-plans', label: 'Meal Plans' },
     { id: 'store', label: 'Kitchen Store' },
-    { id: 'vault', label: 'The Vault' },
+    { id: 'vault', label: 'Premium' },
   ];
 
   const handleTab = (id: string) => {
@@ -82,7 +82,7 @@ export default function Navbar({ activeTab, setActiveTab, onJoinVault }: NavbarP
           boxShadow: '0 4px 14px rgba(255,107,107,0.35)',
           flexShrink: 0, whiteSpace: 'nowrap'
         }} className="desktop-nav">
-          Join The Vault
+          Join Kulah Pro
         </button>
 
         {/* Mobile hamburger */}
@@ -126,7 +126,7 @@ export default function Navbar({ activeTab, setActiveTab, onJoinVault }: NavbarP
             letterSpacing: '0.06em', textTransform: 'uppercase',
             cursor: 'pointer', marginTop: '8px'
           }}>
-            Join The Vault
+            Join Kulah Pro
           </button>
         </div>
       )}
