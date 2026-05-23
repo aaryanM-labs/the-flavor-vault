@@ -24,7 +24,7 @@ export default function Subscription({ isPremium, onSubscribe, onUnsubscribe }: 
       isActive: !isPremium,
     },
     {
-      name: 'The Vault',
+      name: 'Kulah Pro',
       price: '$9',
       period: 'per month',
       description: 'Unlock every masterclass and premium recipe',
@@ -35,7 +35,7 @@ export default function Subscription({ isPremium, onSubscribe, onUnsubscribe }: 
         'New recipes every week',
         'Priority support',
       ],
-      cta: isPremium ? 'Current Plan' : 'Join The Vault',
+      cta: isPremium ? 'Current Plan' : 'Join Kulah Pro',
       isFeatured: true,
       isActive: isPremium,
     },
@@ -68,7 +68,7 @@ export default function Subscription({ isPremium, onSubscribe, onUnsubscribe }: 
             fontWeight: 800, fontStyle: 'italic',
             color: 'white', marginBottom: '16px'
           }}>
-            Unlock The Full Vault
+            Unlock Kulah Pro
           </h2>
           <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1rem', maxWidth: '480px', margin: '0 auto' }}>
             Premium recipes, advanced techniques, and masterclasses from kitchens around the world.

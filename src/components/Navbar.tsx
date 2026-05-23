@@ -46,12 +46,12 @@ export default function Navbar({ activeTab, setActiveTab, onJoinVault }: NavbarP
         }}>
           <Gem size={20} color="#FF6B6B" />
           <span style={{
-            fontFamily: 'Playfair Display, serif',
-            fontSize: '1.3rem', fontWeight: 700,
-            fontStyle: 'italic', color: '#0D5C63'
-          }}>
-            The Flavor <span style={{ color: '#FF6B6B' }}>Vault</span>
-          </span>
+  fontFamily: 'Playfair Display, serif',
+  fontSize: '1.3rem', fontWeight: 700,
+  fontStyle: 'italic', color: '#0D5C63'
+}}>
+  Kul<span style={{ color: '#FF6B6B' }}>ah</span>
+</span>
         </div>
 
         {/* Desktop Tabs */}

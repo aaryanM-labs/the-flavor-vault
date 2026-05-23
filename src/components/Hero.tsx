@@ -62,9 +62,9 @@ export default function Hero({ searchTerm, setSearchTerm, onExplore }: HeroProps
           marginBottom: '20px',
           fontStyle: 'italic'
         }}>
-          Every Dish Tells a<br />
-          <span style={{ color: '#0D5C63' }}>Story Worth</span>{' '}
-          <span style={{ color: '#FF6B6B' }}>Tasting.</span>
+          Kulah.<br />
+<span style={{ color: '#0D5C63' }}>Eat</span>{' '}
+<span style={{ color: '#FF6B6B' }}>Everything.</span>
         </h1>
 
         {/* Subheading */}
@@ -75,8 +75,7 @@ export default function Hero({ searchTerm, setSearchTerm, onExplore }: HeroProps
           margin: '0 auto 40px',
           lineHeight: 1.7
         }}>
-          Discover chef-crafted recipes from across the world — from Ugandan kitchens
-          to Parisian patisseries. Unlock premium masterclasses inside The Vault.
+          From Kampala kitchens to Parisian patisseries — Kulah is your passport to every flavor on earth. Free recipes, premium masterclasses, and real techniques.
         </p>
 
         {/* Search Bar */}

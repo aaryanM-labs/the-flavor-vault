@@ -56,7 +56,7 @@ export default function About() {
             padding: '4px 14px', borderRadius: '50px',
             marginBottom: '20px'
           }}>
-            The Person Behind The Vault
+            The Person Behind Kulah
           </div>
 
           <h2 style={{
@@ -65,15 +65,15 @@ export default function About() {
             fontWeight: 800, fontStyle: 'italic',
             color: '#1A1A2E', marginBottom: '20px', lineHeight: 1.2
           }}>
-            Food is my language.<br />
-            <span style={{ color: '#FF6B6B' }}>Flavor is my craft.</span>
+            Kulah means eat.<br />
+<span style={{ color: '#FF6B6B' }}>We take that seriously.</span>
           </h2>
 
           <p style={{
             fontSize: '1rem', color: '#1A1A2E80',
             lineHeight: 1.8, marginBottom: '16px'
           }}>
-            I built The Flavor Vault because I believe great food should have no borders.
+            I built Kulah because great food has no borders, no passport, no gatekeepers.
             From the smoky kitchens of Kampala to the patisseries of Paris — every culture
             has a dish that stops you in your tracks.
           </p>

@@ -12,17 +12,17 @@ export default function Footer() {
           fontSize: '1.6rem', fontWeight: 700,
           fontStyle: 'italic', marginBottom: '12px'
         }}>
-          The Flavor <span style={{ color: '#FF6B6B' }}>Vault</span>
+          Kul <span style={{ color: '#FF6B6B' }}>ah</span>
         </div>
         <p style={{ fontSize: '0.88rem', marginBottom: '32px', maxWidth: '400px', margin: '0 auto 32px', lineHeight: 1.6 }}>
-          Chef-crafted recipes from across the world. Free and premium content for serious food lovers.
+          Kulah — Eat Everything. Global recipes, premium masterclasses, and kitchen tools for serious food lovers.
         </p>
         <div style={{
           borderTop: '1px solid rgba(255,255,255,0.08)',
           paddingTop: '24px',
           fontSize: '0.78rem'
         }}>
-          © 2026 The Flavor Vault. All rights reserved.
+          © 2026 Kulah. All rights reserved.
         </div>
       </div>
     </footer>
