@@ -13,92 +13,92 @@ export default function Subscription({ isPremium, onSubscribe, onUnsubscribe }: 
       price: '$0',
       period: 'forever',
       description: 'Start exploring the world of flavor',
-      features: [
-        'Access to all free recipes',
-        'Search and filter by category',
-        'Nutrition information',
-        'Chef notes',
-      ],
+      features: ['Access to all free recipes', 'Search and filter by category', 'Nutrition information', 'Chef notes', 'Ingredient directory'],
       cta: 'Current Plan',
-      isFeatured: false,
-      isActive: !isPremium,
+      featured: false,
+      active: !isPremium,
     },
     {
       name: 'Kulah Pro',
       price: '$9',
       period: 'per month',
       description: 'Unlock every masterclass and premium recipe',
-      features: [
-        'Everything in Free',
-        'All premium locked recipes',
-        'Advanced techniques & masterclasses',
-        'New recipes every week',
-        'Priority support',
-      ],
+      features: ['Everything in Free', 'All premium locked recipes', 'Advanced techniques & masterclasses', 'New recipes every week', 'Priority support', 'Exclusive Ugandan collection'],
       cta: isPremium ? 'Current Plan' : 'Join Kulah Pro',
-      isFeatured: true,
-      isActive: isPremium,
+      featured: true,
+      active: isPremium,
     },
   ];
 
   return (
     <section style={{
-      padding: '80px 24px',
-      background: 'linear-gradient(135deg, #0D5C63 0%, #0a4a50 100%)',
+      padding: '100px 32px',
+      background: 'linear-gradient(135deg, #0D5C63 0%, #0a4a50 60%, #083a40 100%)',
+      position: 'relative', overflow: 'hidden'
     }}>
-      <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+      {/* Decorative */}
+      <div style={{
+        position: 'absolute', top: '-100px', right: '-100px',
+        width: '400px', height: '400px', borderRadius: '50%',
+        background: 'rgba(255,107,107,0.08)', pointerEvents: 'none'
+      }} />
+
+      <div style={{ maxWidth: '960px', margin: '0 auto' }}>
 
         {/* Header */}
-        <div style={{ textAlign: 'center', marginBottom: '56px' }}>
+        <div style={{ textAlign: 'center', marginBottom: '64px' }}>
           <div style={{
             display: 'inline-flex', alignItems: 'center', gap: '8px',
-            backgroundColor: 'rgba(255,255,255,0.1)',
-            border: '1px solid rgba(255,255,255,0.2)',
-            borderRadius: '50px', padding: '6px 16px',
-            fontSize: '0.75rem', fontWeight: 700,
-            letterSpacing: '0.1em', textTransform: 'uppercase',
+            backgroundColor: 'rgba(255,255,255,0.08)',
+            border: '1px solid rgba(255,255,255,0.15)',
+            borderRadius: '50px', padding: '6px 18px',
+            fontFamily: 'Space Grotesk, sans-serif',
+            fontSize: '0.68rem', fontWeight: 700,
+            letterSpacing: '0.12em', textTransform: 'uppercase',
             color: '#FF6B6B', marginBottom: '24px'
           }}>
-            <Gem size={14} /> Membership Plans
+            <Gem size={13} /> Membership Plans
           </div>
 
           <h2 style={{
-            fontFamily: 'Playfair Display, serif',
-            fontSize: 'clamp(1.8rem, 3vw, 2.8rem)',
-            fontWeight: 800, fontStyle: 'italic',
+            fontFamily: 'Cormorant Garamond, serif',
+            fontSize: 'clamp(2rem, 4vw, 3.2rem)',
+            fontWeight: 700, fontStyle: 'italic',
             color: 'white', marginBottom: '16px'
           }}>
             Unlock Kulah Pro
           </h2>
-          <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '1rem', maxWidth: '480px', margin: '0 auto' }}>
-            Premium recipes, advanced techniques, and masterclasses from kitchens around the world.
+          <p style={{
+            fontFamily: 'DM Sans, sans-serif',
+            color: 'rgba(255,255,255,0.6)', fontSize: '1rem',
+            maxWidth: '460px', margin: '0 auto', lineHeight: 1.7
+          }}>
+            Premium recipes, advanced techniques, and masterclasses
+            from kitchens around the world.
           </p>
         </div>
 
         {/* Plans */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
           gap: '24px'
         }}>
           {plans.map(plan => (
-            <div
-              key={plan.name}
-              style={{
-                backgroundColor: plan.isFeatured ? 'white' : 'rgba(255,255,255,0.08)',
-                borderRadius: '24px',
-                padding: '36px 32px',
-                border: plan.isFeatured ? 'none' : '1px solid rgba(255,255,255,0.12)',
-                position: 'relative',
-                boxShadow: plan.isFeatured ? '0 24px 60px rgba(0,0,0,0.2)' : 'none'
-              }}
-            >
-              {plan.isFeatured && (
+            <div key={plan.name} style={{
+              backgroundColor: plan.featured ? 'white' : 'rgba(255,255,255,0.06)',
+              borderRadius: '28px', padding: '40px 36px',
+              border: plan.featured ? 'none' : '1px solid rgba(255,255,255,0.1)',
+              position: 'relative',
+              boxShadow: plan.featured ? '0 32px 80px rgba(0,0,0,0.25)' : 'none'
+            }}>
+              {plan.featured && (
                 <div style={{
                   position: 'absolute', top: '-14px', left: '50%',
                   transform: 'translateX(-50%)',
                   backgroundColor: '#FF6B6B', color: 'white',
-                  fontSize: '0.7rem', fontWeight: 700,
+                  fontFamily: 'Space Grotesk, sans-serif',
+                  fontSize: '0.68rem', fontWeight: 700,
                   letterSpacing: '0.1em', textTransform: 'uppercase',
                   padding: '6px 20px', borderRadius: '50px',
                   whiteSpace: 'nowrap'
@@ -107,69 +107,74 @@ export default function Subscription({ isPremium, onSubscribe, onUnsubscribe }: 
                 </div>
               )}
 
-              <div style={{ marginBottom: '8px' }}>
-                <span style={{
-                  fontSize: '0.8rem', fontWeight: 700,
-                  letterSpacing: '0.1em', textTransform: 'uppercase',
-                  color: plan.isFeatured ? '#0D5C63' : 'rgba(255,255,255,0.6)'
-                }}>
-                  {plan.name}
-                </span>
+              <div style={{
+                fontFamily: 'Space Grotesk, sans-serif',
+                fontSize: '0.72rem', fontWeight: 700,
+                letterSpacing: '0.12em', textTransform: 'uppercase',
+                color: plan.featured ? '#0D5C63' : 'rgba(255,255,255,0.5)',
+                marginBottom: '8px'
+              }}>
+                {plan.name}
               </div>
 
-              <div style={{ marginBottom: '8px' }}>
+              <div style={{ marginBottom: '8px', display: 'flex', alignItems: 'baseline', gap: '6px' }}>
                 <span style={{
-                  fontFamily: 'Playfair Display, serif',
-                  fontSize: '3rem', fontWeight: 800,
-                  color: plan.isFeatured ? '#1A1A2E' : 'white'
+                  fontFamily: 'Cormorant Garamond, serif',
+                  fontSize: '3.5rem', fontWeight: 700,
+                  color: plan.featured ? '#1A1A2E' : 'white', lineHeight: 1
                 }}>
                   {plan.price}
                 </span>
                 <span style={{
+                  fontFamily: 'DM Sans, sans-serif',
                   fontSize: '0.85rem',
-                  color: plan.isFeatured ? '#1A1A2E60' : 'rgba(255,255,255,0.5)',
-                  marginLeft: '6px'
+                  color: plan.featured ? 'rgba(26,26,46,0.5)' : 'rgba(255,255,255,0.4)'
                 }}>
                   /{plan.period}
                 </span>
               </div>
 
               <p style={{
+                fontFamily: 'DM Sans, sans-serif',
                 fontSize: '0.88rem',
-                color: plan.isFeatured ? '#1A1A2E70' : 'rgba(255,255,255,0.55)',
-                marginBottom: '28px', lineHeight: 1.5
+                color: plan.featured ? 'rgba(26,26,46,0.6)' : 'rgba(255,255,255,0.5)',
+                marginBottom: '28px', lineHeight: 1.6
               }}>
                 {plan.description}
               </p>
 
-              <ul style={{ listStyle: 'none', padding: 0, marginBottom: '32px', display: 'flex', flexDirection: 'column', gap: '12px' }}>
-                {plan.features.map((feature, i) => (
-                  <li key={i} style={{
+              <ul style={{
+                listStyle: 'none', padding: 0,
+                marginBottom: '32px',
+                display: 'flex', flexDirection: 'column', gap: '12px'
+              }}>
+                {plan.features.map(f => (
+                  <li key={f} style={{
                     display: 'flex', alignItems: 'center', gap: '10px',
+                    fontFamily: 'DM Sans, sans-serif',
                     fontSize: '0.88rem',
-                    color: plan.isFeatured ? '#1A1A2E' : 'rgba(255,255,255,0.8)'
+                    color: plan.featured ? '#1A1A2E' : 'rgba(255,255,255,0.75)'
                   }}>
-                    <Check size={16} color={plan.isFeatured ? '#0D5C63' : '#FF6B6B'} style={{ flexShrink: 0 }} />
-                    {feature}
+                    <Check size={15} color={plan.featured ? '#0D5C63' : '#FF6B6B'} style={{ flexShrink: 0 }} />
+                    {f}
                   </li>
                 ))}
               </ul>
 
               <button
                 onClick={() => {
-                  if (plan.isFeatured && !isPremium) onSubscribe();
-                  if (plan.isFeatured && isPremium) onUnsubscribe();
+                  if (plan.featured && !isPremium) onSubscribe();
+                  if (plan.featured && isPremium) onUnsubscribe();
                 }}
                 style={{
                   width: '100%',
-                  backgroundColor: plan.isFeatured ? (isPremium ? '#1A1A2E' : '#FF6B6B') : 'rgba(255,255,255,0.1)',
-                  color: 'white',
-                  border: plan.isFeatured ? 'none' : '1px solid rgba(255,255,255,0.2)',
-                  borderRadius: '14px', padding: '14px',
-                  fontSize: '0.88rem', fontWeight: 700,
-                  letterSpacing: '0.06em', textTransform: 'uppercase',
-                  cursor: plan.isActive && !plan.isFeatured ? 'default' : 'pointer',
-                  opacity: plan.isActive && !plan.isFeatured ? 0.6 : 1
+                  backgroundColor: plan.featured ? (isPremium ? '#1A1A2E' : '#FF6B6B') : 'rgba(255,255,255,0.08)',
+                  color: 'white', border: plan.featured ? 'none' : '1px solid rgba(255,255,255,0.15)',
+                  borderRadius: '14px', padding: '15px',
+                  fontFamily: 'Space Grotesk, sans-serif',
+                  fontSize: '0.82rem', fontWeight: 700,
+                  letterSpacing: '0.08em', textTransform: 'uppercase',
+                  cursor: 'pointer'
                 }}
               >
                 {plan.cta}
@@ -177,20 +182,6 @@ export default function Subscription({ isPremium, onSubscribe, onUnsubscribe }: 
             </div>
           ))}
         </div>
-
-        {isPremium && (
-          <p style={{
-            textAlign: 'center', marginTop: '24px',
-            color: 'rgba(255,255,255,0.5)', fontSize: '0.8rem'
-          }}>
-            You are a Kulah Pro member. <button
-              onClick={onUnsubscribe}
-              style={{ background: 'none', border: 'none', color: '#FF6B6B', cursor: 'pointer', fontSize: '0.8rem', fontWeight: 600 }}
-            >
-              Cancel membership
-            </button>
-          </p>
-        )}
       </div>
     </section>
   );
