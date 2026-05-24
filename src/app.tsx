@@ -17,24 +17,19 @@ export default function App() {
   const [activeTab, setActiveTab] = useState('home');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
-  const [selectedIngredient, setSelectedIngredient] = useState<string | null>(null);
+  const [selectedIngredient, setSelectedIngredient] = useState<string>('mint');
   const [isPremium, setIsPremium] = useState(false);
 
   const handleViewDetails = (recipe: Recipe) => {
     setSelectedRecipe(recipe);
-    setSelectedIngredient(null);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleIngredientClick = (id: string) => {
     setSelectedIngredient(id);
     setSelectedRecipe(null);
+    setActiveTab('ingredients');
     window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
-
-  const handleBack = () => {
-    setSelectedRecipe(null);
-    setSelectedIngredient(null);
   };
 
   return (
@@ -44,28 +39,19 @@ export default function App() {
         setActiveTab={(tab) => {
           setActiveTab(tab);
           setSelectedRecipe(null);
-          setSelectedIngredient(null);
         }}
         onJoinVault={() => {
           setActiveTab('vault');
           setSelectedRecipe(null);
-          setSelectedIngredient(null);
         }}
       />
 
       <div style={{ flex: 1 }}>
-        {selectedIngredient ? (
-          <IngredientPage
-            ingredientId={selectedIngredient}
-            onBack={handleBack}
-            onViewRecipe={handleViewDetails}
-            onUnlockClick={() => setActiveTab('vault')}
-          />
-        ) : selectedRecipe ? (
+        {selectedRecipe ? (
           <RecipeDetail
             recipe={selectedRecipe}
             isPremium={isPremium}
-            onBack={handleBack}
+            onBack={() => setSelectedRecipe(null)}
             onUnlockClick={() => { setActiveTab('vault'); setSelectedRecipe(null); }}
           />
         ) : (
@@ -93,6 +79,14 @@ export default function App() {
               <RecipeGrid
                 searchTerm={searchTerm}
                 onViewDetails={handleViewDetails}
+                onUnlockClick={() => setActiveTab('vault')}
+              />
+            )}
+            {activeTab === 'ingredients' && (
+              <IngredientPage
+                ingredientId={selectedIngredient}
+                onBack={() => setActiveTab('home')}
+                onViewRecipe={handleViewDetails}
                 onUnlockClick={() => setActiveTab('vault')}
               />
             )}

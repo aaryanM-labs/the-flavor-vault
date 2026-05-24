@@ -11,12 +11,13 @@ export default function Navbar({ activeTab, setActiveTab, onJoinVault }: NavbarP
   const [isOpen, setIsOpen] = useState(false);
 
   const tabs = [
-    { id: 'home', label: 'Home' },
-    { id: 'explore', label: 'Recipes' },
-    { id: 'meal-plans', label: 'Meal Plans' },
-    { id: 'store', label: 'Kitchen Store' },
-    { id: 'vault', label: 'Premium' },
-  ];
+  { id: 'home', label: 'Home' },
+  { id: 'explore', label: 'Recipes' },
+  { id: 'ingredients', label: 'Ingredients' },
+  { id: 'meal-plans', label: 'Meal Plans' },
+  { id: 'store', label: 'Kitchen Store' },
+  { id: 'vault', label: 'Premium' },
+];
 
   const handleTab = (id: string) => {
     setActiveTab(id);
