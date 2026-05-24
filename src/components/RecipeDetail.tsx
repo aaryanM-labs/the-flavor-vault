@@ -55,7 +55,7 @@ export default function RecipeDetail({ recipe, isPremium, onBack, onUnlockClick 
               This is a Vault Exclusive
             </h3>
             <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.9rem' }}>
-              Join The Vault to unlock this masterclass
+              Join The Kulah Pro to unlock this masterclass
             </p>
             <button
               onClick={onUnlockClick}
@@ -67,7 +67,7 @@ export default function RecipeDetail({ recipe, isPremium, onBack, onUnlockClick 
                 marginTop: '8px'
               }}
             >
-              Join The Vault
+              Join The Kulah Pro
             </button>
           </div>
         )}
@@ -83,7 +83,7 @@ export default function RecipeDetail({ recipe, isPremium, onBack, onUnlockClick 
           padding: '4px 14px', borderRadius: '50px',
           marginBottom: '16px'
         }}>
-          {recipe.category}
+          {recipe.mainCategory}
         </div>
 
         <h1 style={{
