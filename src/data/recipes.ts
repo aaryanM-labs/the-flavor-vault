@@ -1,5 +1,3 @@
-import type { Recipe } from '../types';
-
 // Using a loose type here because recipe entries include a `subCategory` field
 // which may not exist on the strict Recipe type definition.
 export const RECIPES: any[] = [
