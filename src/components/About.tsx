@@ -1,4 +1,4 @@
-import { Instagram, Youtube, Twitter } from 'lucide-react';
+// Removed lucide-react icons to avoid missing exports; using emojis for social icons
 
 export default function About() {
   return (
@@ -124,9 +124,9 @@ export default function About() {
           {/* Social */}
           <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
             {[
-              { icon: <Instagram size={16} />, label: 'Instagram' },
-              { icon: <Youtube size={16} />, label: 'YouTube' },
-              { icon: <Twitter size={16} />, label: 'Twitter' },
+              { icon: '📸', label: 'Instagram', color: '#E1306C'},
+              { icon: '▶️', label: 'YouTube', color: '#FF0000' },
+              { icon: '🐦', label: 'Twitter', color: '#1DA1F2' },
             ].map(s => (
               <button key={s.label} style={{
                 display: 'flex', alignItems: 'center', gap: '8px',
