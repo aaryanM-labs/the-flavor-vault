@@ -3,52 +3,17 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import RecipeGrid from './components/RecipeGrid';
 import RecipeDetail from './components/RecipeDetail';
+import Subscription from './components/Subscription';
 import About from './components/About';
 import Newsletter from './components/Newsletter';
 import KitchenStore from './components/KitchenStore';
 import MealPlans from './components/MealPlans';
 import Footer from './components/Footer';
-import type { Recipe, RecipeCategory } from './types';
-
-type SubscriptionProps = {
-  isPremium: boolean;
-  onSubscribe: () => void;
-  onUnsubscribe: () => void;
-};
-
-function Subscription({ isPremium, onSubscribe, onUnsubscribe }: SubscriptionProps) {
-  return (
-    <section style={{ padding: '2rem', backgroundColor: '#fff5e6', borderRadius: '1rem', margin: '2rem 1rem' }}>
-      <h2 style={{ marginBottom: '1rem' }}>
-        {isPremium ? 'Premium Member' : 'Unlock the Vault'}
-      </h2>
-      <p style={{ marginBottom: '1.5rem' }}>
-        {isPremium
-          ? 'Enjoy exclusive recipes, custom meal plans, and curated kitchen tips.'
-          : 'Subscribe for premium recipes, meal plans, and exclusive kitchen offers.'}
-      </p>
-      <button
-        onClick={isPremium ? onUnsubscribe : onSubscribe}
-        style={{
-          padding: '0.75rem 1.25rem',
-          fontSize: '1rem',
-          backgroundColor: '#ff8c42',
-          color: '#fff',
-          border: 'none',
-          borderRadius: '999px',
-          cursor: 'pointer',
-        }}
-      >
-        {isPremium ? 'Cancel Subscription' : 'Join the Vault'}
-      </button>
-    </section>
-  );
-}
+import type { Recipe } from './types';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState('home');
   const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState<RecipeCategory>('all');
   const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null);
   const [isPremium, setIsPremium] = useState(false);
 
@@ -83,8 +48,6 @@ export default function App() {
                   onExplore={() => setActiveTab('explore')}
                 />
                 <RecipeGrid
-                  selectedCategory={selectedCategory}
-                  setSelectedCategory={setSelectedCategory}
                   searchTerm={searchTerm}
                   onViewDetails={handleViewDetails}
                   onUnlockClick={() => setActiveTab('vault')}
@@ -97,8 +60,6 @@ export default function App() {
             )}
             {activeTab === 'explore' && (
               <RecipeGrid
-                selectedCategory={selectedCategory}
-                setSelectedCategory={setSelectedCategory}
                 searchTerm={searchTerm}
                 onViewDetails={handleViewDetails}
                 onUnlockClick={() => setActiveTab('vault')}

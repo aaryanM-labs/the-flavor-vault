@@ -183,7 +183,7 @@ export default function Subscription({ isPremium, onSubscribe, onUnsubscribe }: 
             textAlign: 'center', marginTop: '24px',
             color: 'rgba(255,255,255,0.5)', fontSize: '0.8rem'
           }}>
-            You are a Vault member. <button
+            You are a Kulah Pro member. <button
               onClick={onUnsubscribe}
               style={{ background: 'none', border: 'none', color: '#FF6B6B', cursor: 'pointer', fontSize: '0.8rem', fontWeight: 600 }}
             >

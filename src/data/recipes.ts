@@ -1,130 +1,14 @@
 import type { Recipe } from '../types';
 
-export const RECIPES: Recipe[] = [
+// Using a loose type here because recipe entries include a `subCategory` field
+// which may not exist on the strict Recipe type definition.
+export const RECIPES: any[] = [
   {
-    id: 'jerk-chicken',
-    title: 'Jamaican Jerk Chicken',
-    tagline: 'Bold, smoky, and fiery — marinated overnight in a blend of scotch bonnets and allspice.',
-    category: 'grilling',
-    difficulty: 'Intermediate',
-    time: '45 Mins',
-    servings: 4,
-    image: 'https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?q=80&w=1000&auto=format&fit=crop',
-    isPremium: false,
-    chefNote: 'The secret is the overnight marinade. Never rush jerk chicken.',
-    nutrition: { calories: '420 kcal', protein: '38g', carbs: '8g', fat: '22g' },
-    ingredients: [
-      { name: 'Chicken thighs', amount: '8 pieces' },
-      { name: 'Scotch bonnet peppers', amount: '3' },
-      { name: 'Allspice berries', amount: '2 tbsp' },
-      { name: 'Fresh thyme', amount: '4 sprigs' },
-      { name: 'Garlic cloves', amount: '6' },
-      { name: 'Brown sugar', amount: '2 tbsp' },
-      { name: 'Soy sauce', amount: '3 tbsp' },
-      { name: 'Lime juice', amount: '2 limes' }
-    ],
-    steps: [
-      'Blend scotch bonnets, allspice, thyme, garlic, brown sugar, soy sauce and lime juice into a smooth marinade.',
-      'Score the chicken thighs deeply and coat thoroughly with the marinade. Cover and refrigerate overnight.',
-      'Bring chicken to room temperature 30 minutes before grilling.',
-      'Grill on medium-high heat for 20 minutes each side until charred and cooked through.',
-      'Rest for 5 minutes before serving with rice and peas.'
-    ]
-  },
-  {
-    id: 'matoke-stew',
-    title: 'Ugandan Matoke Stew',
-    tagline: 'Slow-cooked green bananas in a rich groundnut and tomato sauce — pure East African comfort.',
-    category: 'cooking',
-    difficulty: 'Easy',
-    time: '60 Mins',
-    servings: 6,
-    image: 'https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=1000&auto=format&fit=crop',
-    isPremium: false,
-    chefNote: 'Wrapping matoke in banana leaves while steaming intensifies the flavor dramatically.',
-    nutrition: { calories: '280 kcal', protein: '8g', carbs: '52g', fat: '6g' },
-    ingredients: [
-      { name: 'Green bananas (matoke)', amount: '8, peeled' },
-      { name: 'Groundnut paste', amount: '4 tbsp' },
-      { name: 'Tomatoes', amount: '4, chopped' },
-      { name: 'Onion', amount: '2, sliced' },
-      { name: 'Garlic', amount: '4 cloves' },
-      { name: 'Fresh ginger', amount: '2cm piece' },
-      { name: 'Vegetable stock', amount: '500ml' }
-    ],
-    steps: [
-      'Peel and halve the matoke, place in cold salted water to prevent browning.',
-      'Fry onions, garlic and ginger until golden and fragrant.',
-      'Add tomatoes and cook until they break down into a thick sauce.',
-      'Stir in groundnut paste and stock, simmer for 5 minutes.',
-      'Add matoke, cover and cook on low heat for 40 minutes until tender.',
-      'Serve hot with steamed rice or chapati.'
-    ]
-  },
-  {
-    id: 'chocolate-lava',
-    title: 'Dark Chocolate Lava Cake',
-    tagline: 'A crisp shell hiding a river of molten 70% dark chocolate inside.',
-    category: 'desserts',
-    difficulty: 'Advanced',
-    time: '30 Mins',
-    servings: 4,
-    image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=1000&auto=format&fit=crop',
-    isPremium: true,
-    chefNote: 'Timing is everything — 12 minutes exactly. One extra minute and you lose the lava.',
-    nutrition: { calories: '520 kcal', protein: '8g', carbs: '48g', fat: '34g' },
-    ingredients: [
-      { name: '70% dark chocolate', amount: '200g' },
-      { name: 'Unsalted butter', amount: '100g' },
-      { name: 'Eggs', amount: '4' },
-      { name: 'Egg yolks', amount: '4' },
-      { name: 'Caster sugar', amount: '80g' },
-      { name: 'Plain flour', amount: '40g' },
-      { name: 'Cocoa powder', amount: 'For dusting' }
-    ],
-    steps: [
-      'Melt chocolate and butter together over a bain marie until completely smooth.',
-      'Whisk eggs, yolks and sugar until pale and doubled in volume.',
-      'Fold the chocolate mixture into the egg mixture gently.',
-      'Sift in flour and fold until just combined — do not overmix.',
-      'Pour into buttered and cocoa-dusted ramekins. Refrigerate for 20 minutes.',
-      'Bake at 200°C for exactly 12 minutes.',
-      'Turn out immediately and serve with vanilla ice cream.'
-    ]
-  },
-  {
-    id: 'mango-lassi',
-    title: 'Fresh Alphonso Mango Lassi',
-    tagline: 'Thick, cold, and fragrant — blended Alphonso mangoes with cardamom yoghurt.',
-    category: 'juices',
-    difficulty: 'Easy',
-    time: '10 Mins',
-    servings: 2,
-    image: 'https://images.unsplash.com/photo-1527661591475-527312dd65f5?q=80&w=1000&auto=format&fit=crop',
-    isPremium: false,
-    chefNote: 'Only use Alphonso mangoes when in season — nothing else comes close.',
-    nutrition: { calories: '180 kcal', protein: '6g', carbs: '34g', fat: '3g' },
-    ingredients: [
-      { name: 'Alphonso mangoes', amount: '2, peeled and cubed' },
-      { name: 'Full fat yoghurt', amount: '300ml' },
-      { name: 'Whole milk', amount: '100ml' },
-      { name: 'Green cardamom', amount: '4 pods, ground' },
-      { name: 'Honey', amount: '1 tbsp' },
-      { name: 'Ice cubes', amount: 'Generous handful' }
-    ],
-    steps: [
-      'Add all ingredients to a blender.',
-      'Blend on high for 60 seconds until completely smooth.',
-      'Taste and adjust sweetness with honey.',
-      'Pour into chilled glasses over ice.',
-      'Garnish with a pinch of ground cardamom and serve immediately.'
-    ]
-  },
-  {
-    id: 'sourdough',
+    id: 'sourdough-classic',
     title: 'Classic Sourdough Loaf',
     tagline: 'A perfectly open crumb with a shattering crust — built from a 7-day wild starter.',
     category: 'baking',
+    subCategory: 'bread',
     difficulty: 'Advanced',
     time: '24 Hrs',
     servings: 8,
@@ -132,6 +16,7 @@ export const RECIPES: Recipe[] = [
     isPremium: true,
     chefNote: 'Your starter is everything. Feed it daily for a week before baking.',
     nutrition: { calories: '180 kcal', protein: '7g', carbs: '36g', fat: '1g' },
+    featuredIngredients: ['sourdough starter', 'bread flour', 'sea salt'],
     ingredients: [
       { name: 'Bread flour', amount: '500g' },
       { name: 'Active sourdough starter', amount: '100g' },
@@ -146,14 +31,339 @@ export const RECIPES: Recipe[] = [
       'Shape and place in a floured banneton.',
       'Cold proof in fridge overnight for 12-16 hours.',
       'Bake in a Dutch oven at 250°C for 20 minutes covered, then 25 minutes uncovered.',
-      'Cool completely on a wire rack for at least 2 hours before cutting.'
+      'Cool completely for at least 2 hours before cutting.'
+    ]
+  },
+  {
+    id: 'brown-butter-cookies',
+    title: 'Brown Butter Chocolate Chunk Cookies',
+    tagline: 'Nutty browned butter, pools of dark chocolate, and flaky sea salt on top.',
+    category: 'baking',
+    subCategory: 'cookies',
+    difficulty: 'Intermediate',
+    time: '35 Mins',
+    servings: 24,
+    image: 'https://images.unsplash.com/photo-1499636136210-6f4ee915583e?q=80&w=1000&auto=format&fit=crop',
+    isPremium: false,
+    chefNote: 'Brown the butter until it smells like hazelnuts. That is the moment.',
+    nutrition: { calories: '210 kcal', protein: '3g', carbs: '28g', fat: '11g' },
+    featuredIngredients: ['butter', 'dark chocolate', 'brown sugar'],
+    ingredients: [
+      { name: 'Unsalted butter', amount: '225g' },
+      { name: 'Dark chocolate chunks', amount: '200g' },
+      { name: 'Brown sugar', amount: '200g' },
+      { name: 'Caster sugar', amount: '100g' },
+      { name: 'Eggs', amount: '2' },
+      { name: 'Plain flour', amount: '280g' },
+      { name: 'Baking soda', amount: '1 tsp' },
+      { name: 'Flaky sea salt', amount: 'For topping' }
+    ],
+    steps: [
+      'Brown the butter in a saucepan over medium heat until golden and nutty. Cool for 10 minutes.',
+      'Whisk browned butter with both sugars until combined.',
+      'Beat in eggs one at a time until smooth and glossy.',
+      'Fold in flour and baking soda until just combined.',
+      'Fold in chocolate chunks. Chill dough for 30 minutes.',
+      'Scoop onto lined baking trays, top with flaky salt.',
+      'Bake at 180°C for 11-12 minutes until golden at edges but soft in center.',
+      'Cool on tray for 5 minutes before transferring.'
+    ]
+  },
+  {
+    id: 'cardamom-knots',
+    title: 'Cardamom Pistachio Brioche Knots',
+    tagline: 'Warm Nordic rolls enriched with freshly ground cardamom and pistachios.',
+    category: 'baking',
+    subCategory: 'pastries',
+    difficulty: 'Intermediate',
+    time: '3 Hrs',
+    servings: 8,
+    image: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=1000&auto=format&fit=crop',
+    isPremium: false,
+    chefNote: 'Freshly ground cardamom is non-negotiable. Pre-ground is a completely different spice.',
+    nutrition: { calories: '310 kcal', protein: '6g', carbs: '42g', fat: '14g' },
+    featuredIngredients: ['cardamom', 'pistachios', 'butter'],
+    ingredients: [
+      { name: 'Bread flour', amount: '400g' },
+      { name: 'Active dry yeast', amount: '7g' },
+      { name: 'Whole milk', amount: '150ml' },
+      { name: 'Caster sugar', amount: '80g' },
+      { name: 'Unsalted butter', amount: '75g' },
+      { name: 'Green cardamom pods, ground', amount: '2 tsp' },
+      { name: 'Pistachios, chopped', amount: '100g' },
+      { name: 'Brown sugar', amount: '60g' }
+    ],
+    steps: [
+      'Activate yeast in warm milk with a tablespoon of sugar for 5 minutes.',
+      'Combine flour, sugar, cardamom in mixer. Add yeast milk and knead.',
+      'Add butter gradually until dough is smooth and elastic. Prove 1 hour.',
+      'Mix remaining butter, brown sugar, cardamom and pistachios into filling.',
+      'Roll dough into rectangle, spread filling, fold and cut into strips.',
+      'Twist strips into Nordic knots. Prove 20 more minutes.',
+      'Brush with egg wash, bake at 190°C for 15-18 minutes until golden.'
+    ]
+  },
+  {
+    id: 'lava-cake',
+    title: 'Dark Chocolate Lava Cake',
+    tagline: 'A crisp shell hiding a river of molten 70% dark chocolate inside.',
+    category: 'baking',
+    subCategory: 'cakes',
+    difficulty: 'Advanced',
+    time: '30 Mins',
+    servings: 4,
+    image: 'https://images.unsplash.com/photo-1606313564200-e75d5e30476c?q=80&w=1000&auto=format&fit=crop',
+    isPremium: true,
+    chefNote: 'Timing is everything — 12 minutes exactly. One extra minute and you lose the lava.',
+    nutrition: { calories: '520 kcal', protein: '8g', carbs: '48g', fat: '34g' },
+    featuredIngredients: ['dark chocolate', 'butter', 'eggs'],
+    ingredients: [
+      { name: '70% dark chocolate', amount: '200g' },
+      { name: 'Unsalted butter', amount: '100g' },
+      { name: 'Eggs', amount: '4' },
+      { name: 'Egg yolks', amount: '4' },
+      { name: 'Caster sugar', amount: '80g' },
+      { name: 'Plain flour', amount: '40g' },
+      { name: 'Cocoa powder', amount: 'For dusting' }
+    ],
+    steps: [
+      'Melt chocolate and butter together over a bain marie until smooth.',
+      'Whisk eggs, yolks and sugar until pale and doubled in volume.',
+      'Fold chocolate mixture into egg mixture gently.',
+      'Sift in flour and fold until just combined.',
+      'Pour into buttered and cocoa-dusted ramekins. Refrigerate 20 minutes.',
+      'Bake at 200°C for exactly 12 minutes.',
+      'Turn out immediately and serve with vanilla ice cream.'
+    ]
+  },
+  {
+    id: 'matoke-groundnut',
+    title: 'Matoke in Groundnut Sauce',
+    tagline: 'Slow-cooked green bananas in a rich groundnut and tomato sauce.',
+    category: 'ugandan',
+    subCategory: 'traditional',
+    difficulty: 'Easy',
+    time: '60 Mins',
+    servings: 6,
+    image: 'https://images.unsplash.com/photo-1547592180-85f173990554?q=80&w=1000&auto=format&fit=crop',
+    isPremium: false,
+    chefNote: 'Wrapping matoke in banana leaves while steaming intensifies flavor dramatically.',
+    nutrition: { calories: '280 kcal', protein: '8g', carbs: '52g', fat: '6g' },
+    featuredIngredients: ['matoke', 'groundnut paste', 'tomatoes'],
+    ingredients: [
+      { name: 'Green bananas (matoke)', amount: '8, peeled' },
+      { name: 'Groundnut paste', amount: '4 tbsp' },
+      { name: 'Tomatoes', amount: '4, chopped' },
+      { name: 'Onion', amount: '2, sliced' },
+      { name: 'Garlic', amount: '4 cloves' },
+      { name: 'Fresh ginger', amount: '2cm piece' },
+      { name: 'Vegetable stock', amount: '500ml' }
+    ],
+    steps: [
+      'Peel and halve the matoke, place in cold salted water.',
+      'Fry onions, garlic and ginger until golden.',
+      'Add tomatoes and cook until broken down.',
+      'Stir in groundnut paste and stock, simmer 5 minutes.',
+      'Add matoke, cover and cook on low for 40 minutes.',
+      'Serve hot with steamed rice or chapati.'
+    ]
+  },
+  {
+    id: 'rolex-uganda',
+    title: 'The Ugandan Rolex',
+    tagline: 'Uganda\'s most beloved street food — spiced egg omelette rolled in crispy chapati.',
+    category: 'ugandan',
+    subCategory: 'street-food',
+    difficulty: 'Easy',
+    time: '20 Mins',
+    servings: 2,
+    image: 'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?q=80&w=1000&auto=format&fit=crop',
+    isPremium: false,
+    chefNote: 'Rolex = Rolled Eggs. The chapati must be fresh and hot for the perfect roll.',
+    nutrition: { calories: '380 kcal', protein: '14g', carbs: '42g', fat: '18g' },
+    featuredIngredients: ['eggs', 'chapati', 'tomatoes'],
+    ingredients: [
+      { name: 'Eggs', amount: '3' },
+      { name: 'Fresh chapati', amount: '2' },
+      { name: 'Tomatoes', amount: '2, diced' },
+      { name: 'Red onion', amount: '1, sliced thin' },
+      { name: 'Green pepper', amount: '1, sliced' },
+      { name: 'Fresh cabbage', amount: 'Small handful, shredded' }
+    ],
+    steps: [
+      'Beat eggs with salt, pepper, tomatoes, onion and green pepper.',
+      'Heat oil in flat pan on medium-high heat.',
+      'Pour egg mixture and cook into a flat omelette.',
+      'Before fully set, place fresh chapati on top of the egg.',
+      'Flip together so chapati is on bottom.',
+      'Add fresh cabbage on top and roll tightly.',
+      'Wrap in paper and serve immediately.'
+    ]
+  },
+  {
+    id: 'obushera',
+    title: 'Obushera — Fermented Millet Drink',
+    tagline: 'A traditional Ugandan fermented millet drink with natural probiotic qualities.',
+    category: 'ugandan',
+    subCategory: 'ugandan-drinks',
+    difficulty: 'Intermediate',
+    time: '48 Hrs',
+    servings: 8,
+    image: 'https://images.unsplash.com/photo-1544145945-f90425340c7e?q=80&w=1000&auto=format&fit=crop',
+    isPremium: true,
+    chefNote: 'This is living food. The fermentation time determines the sourness — taste as you go.',
+    nutrition: { calories: '120 kcal', protein: '3g', carbs: '24g', fat: '0.5g' },
+    featuredIngredients: ['millet', 'sorghum', 'water'],
+    ingredients: [
+      { name: 'Millet flour', amount: '500g' },
+      { name: 'Sorghum flour', amount: '200g' },
+      { name: 'Clean water', amount: '3 litres' },
+      { name: 'Sugar', amount: '3 tbsp optional' }
+    ],
+    steps: [
+      'Mix millet and sorghum flour with 500ml warm water into a smooth paste.',
+      'Cover and leave at room temperature for 24 hours to ferment.',
+      'Boil remaining water and slowly whisk in fermented paste.',
+      'Cook on medium heat stirring constantly for 15 minutes.',
+      'Cool completely then dilute with cold water to drinking consistency.',
+      'Sweeten lightly if desired. Serve cold over ice.'
+    ]
+  },
+  {
+    id: 'ugandan-chapati',
+    title: 'Ugandan Layered Chapati',
+    tagline: 'Flaky, oily, layered East African chapati — softer and richer than any other version.',
+    category: 'ugandan',
+    subCategory: 'traditional',
+    difficulty: 'Intermediate',
+    time: '45 Mins',
+    servings: 6,
+    image: 'https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=1000&auto=format&fit=crop',
+    isPremium: false,
+    chefNote: 'The layers come from folding oil into the dough. Never skip the resting time.',
+    nutrition: { calories: '280 kcal', protein: '6g', carbs: '44g', fat: '10g' },
+    featuredIngredients: ['flour', 'oil', 'water'],
+    ingredients: [
+      { name: 'Plain flour', amount: '500g' },
+      { name: 'Warm water', amount: '300ml' },
+      { name: 'Vegetable oil', amount: '4 tbsp plus extra' },
+      { name: 'Salt', amount: '1 tsp' },
+      { name: 'Sugar', amount: '1 tsp' }
+    ],
+    steps: [
+      'Mix flour, salt and sugar. Add warm water and oil, knead into smooth dough.',
+      'Rest covered for 30 minutes.',
+      'Divide into 6 balls. Roll each into a thin circle.',
+      'Brush generously with oil, fold into a strip, coil into a ball.',
+      'Rest coiled balls for 10 minutes then roll out again.',
+      'Cook on a hot dry pan, brushing with oil, turning until golden on both sides.',
+      'Keep warm in a clean cloth until serving.'
+    ]
+  },
+  {
+    id: 'jerk-chicken',
+    title: 'Jamaican Jerk Chicken',
+    tagline: 'Bold, smoky and fiery — marinated overnight in scotch bonnets and allspice.',
+    category: 'grilling',
+    subCategory: 'grilled-meats',
+    difficulty: 'Intermediate',
+    time: '45 Mins',
+    servings: 4,
+    image: 'https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?q=80&w=1000&auto=format&fit=crop',
+    isPremium: false,
+    chefNote: 'The secret is the overnight marinade. Never rush jerk chicken.',
+    nutrition: { calories: '420 kcal', protein: '38g', carbs: '8g', fat: '22g' },
+    featuredIngredients: ['scotch bonnet', 'allspice', 'thyme'],
+    ingredients: [
+      { name: 'Chicken thighs', amount: '8 pieces' },
+      { name: 'Scotch bonnet peppers', amount: '3' },
+      { name: 'Allspice berries', amount: '2 tbsp' },
+      { name: 'Fresh thyme', amount: '4 sprigs' },
+      { name: 'Garlic cloves', amount: '6' },
+      { name: 'Brown sugar', amount: '2 tbsp' },
+      { name: 'Soy sauce', amount: '3 tbsp' },
+      { name: 'Lime juice', amount: '2 limes' }
+    ],
+    steps: [
+      'Blend scotch bonnets, allspice, thyme, garlic, brown sugar, soy sauce and lime into marinade.',
+      'Score chicken deeply and coat thoroughly. Refrigerate overnight.',
+      'Bring chicken to room temperature 30 minutes before grilling.',
+      'Grill on medium-high for 20 minutes each side until charred and cooked through.',
+      'Rest 5 minutes before serving with rice and peas.'
+    ]
+  },
+  {
+    id: 'grilled-salmon',
+    title: 'Miso Glazed Grilled Salmon',
+    tagline: 'Caramelized white miso and mirin glaze on perfectly grilled salmon fillets.',
+    category: 'grilling',
+    subCategory: 'grilled-seafood',
+    difficulty: 'Intermediate',
+    time: '25 Mins',
+    servings: 2,
+    image: 'https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?q=80&w=1000&auto=format&fit=crop',
+    isPremium: false,
+    chefNote: 'Pat the salmon completely dry before glazing. Moisture is the enemy of caramelization.',
+    nutrition: { calories: '380 kcal', protein: '36g', carbs: '12g', fat: '20g' },
+    featuredIngredients: ['salmon', 'white miso', 'mirin'],
+    ingredients: [
+      { name: 'Salmon fillets', amount: '2 x 180g' },
+      { name: 'White miso paste', amount: '3 tbsp' },
+      { name: 'Mirin', amount: '2 tbsp' },
+      { name: 'Soy sauce', amount: '1 tbsp' },
+      { name: 'Honey', amount: '1 tbsp' },
+      { name: 'Sesame oil', amount: '1 tsp' },
+      { name: 'Spring onions', amount: 'To garnish' }
+    ],
+    steps: [
+      'Mix miso, mirin, soy sauce, honey and sesame oil into a smooth glaze.',
+      'Pat salmon dry and coat generously with glaze. Marinate 20 minutes.',
+      'Heat grill to high. Place salmon skin side down.',
+      'Grill 4 minutes without moving until skin is crispy.',
+      'Flip and grill 3 more minutes until glaze is caramelized.',
+      'Garnish with spring onions and sesame seeds. Serve with steamed rice.'
+    ]
+  },
+  {
+    id: 'lamb-biryani',
+    title: 'Royal Lamb Dum Biryani',
+    tagline: 'Slow-cooked spiced lamb with saffron-infused basmati sealed under a pastry crust.',
+    category: 'international',
+    subCategory: 'spice-routes',
+    difficulty: 'Advanced',
+    time: '3 Hrs',
+    servings: 6,
+    image: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=1000&auto=format&fit=crop',
+    isPremium: true,
+    chefNote: 'Dum cooking — sealing the pot — is what separates biryani from rice and curry.',
+    nutrition: { calories: '580 kcal', protein: '32g', carbs: '64g', fat: '22g' },
+    featuredIngredients: ['lamb', 'saffron', 'basmati rice', 'cardamom'],
+    ingredients: [
+      { name: 'Lamb shoulder, cubed', amount: '800g' },
+      { name: 'Basmati rice', amount: '400g' },
+      { name: 'Saffron threads', amount: 'Large pinch' },
+      { name: 'Whole spices (cardamom, cloves, star anise)', amount: '2 tbsp mix' },
+      { name: 'Caramelized onions', amount: '3 onions worth' },
+      { name: 'Full fat yoghurt', amount: '200ml' },
+      { name: 'Fresh mint and coriander', amount: 'Large handfuls' },
+      { name: 'Ghee', amount: '4 tbsp' }
+    ],
+    steps: [
+      'Marinate lamb in yoghurt, spices and herbs overnight.',
+      'Cook marinated lamb until tender, about 1 hour.',
+      'Parboil rice with whole spices until 70% cooked.',
+      'Layer rice over lamb in a heavy pot.',
+      'Add saffron milk, caramelized onions, fried nuts and ghee.',
+      'Seal pot with foil and lid. Cook on lowest heat for 25 minutes.',
+      'Rest sealed for 10 minutes before opening and serving.'
     ]
   },
   {
     id: 'pad-thai',
     title: 'Authentic Pad Thai',
     tagline: 'Wok-charred rice noodles with tamarind, fish sauce, and crispy dried shrimp.',
-    category: 'cooking',
+    category: 'international',
+    subCategory: 'noodle-bowl',
     difficulty: 'Intermediate',
     time: '20 Mins',
     servings: 2,
@@ -161,24 +371,181 @@ export const RECIPES: Recipe[] = [
     isPremium: false,
     chefNote: 'High heat is non-negotiable. A weak flame makes soggy Pad Thai.',
     nutrition: { calories: '480 kcal', protein: '22g', carbs: '64g', fat: '14g' },
+    featuredIngredients: ['rice noodles', 'tamarind', 'fish sauce'],
     ingredients: [
-      { name: 'Flat rice noodles', amount: '200g, soaked' },
+      { name: 'Flat rice noodles', amount: '200g soaked' },
       { name: 'Tiger prawns', amount: '150g' },
       { name: 'Eggs', amount: '2' },
       { name: 'Tamarind paste', amount: '3 tbsp' },
       { name: 'Fish sauce', amount: '2 tbsp' },
       { name: 'Palm sugar', amount: '1 tbsp' },
       { name: 'Bean sprouts', amount: '100g' },
-      { name: 'Spring onions', amount: '3, sliced' },
-      { name: 'Roasted peanuts', amount: '50g, crushed' }
+      { name: 'Roasted peanuts', amount: '50g crushed' }
     ],
     steps: [
-      'Mix tamarind, fish sauce and palm sugar into your Pad Thai sauce.',
-      'Heat wok until smoking. Add oil and fry prawns until pink, push to the side.',
+      'Mix tamarind, fish sauce and palm sugar into sauce.',
+      'Heat wok until smoking. Add oil and fry prawns until pink, push to side.',
       'Crack eggs into wok and scramble quickly.',
-      'Add drained noodles and sauce, toss everything on high heat for 2 minutes.',
-      'Add bean sprouts and spring onions, toss for 30 seconds.',
-      'Serve immediately topped with crushed peanuts and a wedge of lime.'
+      'Add drained noodles and sauce, toss on high heat for 2 minutes.',
+      'Add bean sprouts and spring onions, toss 30 seconds.',
+      'Serve topped with crushed peanuts and lime wedge.'
+    ]
+  },
+  {
+    id: 'truffle-pasta',
+    title: 'Black Truffle & Chanterelle Pasta',
+    tagline: 'Al dente rigatoni in a decadent cream of black truffles and wild chanterelles.',
+    category: 'international',
+    subCategory: 'fine-french',
+    difficulty: 'Advanced',
+    time: '35 Mins',
+    servings: 2,
+    image: 'https://images.unsplash.com/photo-1473093295043-cdd812d0e601?q=80&w=1000&auto=format&fit=crop',
+    isPremium: true,
+    chefNote: 'Never wash chanterelles. Use a soft brush. Water destroys their texture.',
+    nutrition: { calories: '640 kcal', protein: '18g', carbs: '74g', fat: '29g' },
+    featuredIngredients: ['black truffle', 'chanterelles', 'double cream'],
+    ingredients: [
+      { name: 'Fresh rigatoni', amount: '250g' },
+      { name: 'Black summer truffle', amount: '20g' },
+      { name: 'Wild chanterelle mushrooms', amount: '150g' },
+      { name: 'Double cream', amount: '120ml' },
+      { name: 'Dry white wine', amount: '60ml' },
+      { name: 'Parmigiano Reggiano', amount: '50g grated' },
+      { name: 'French shallots', amount: '2 minced' }
+    ],
+    steps: [
+      'Clean chanterelles with a soft brush. Never use water.',
+      'Boil pasta in heavily salted water.',
+      'Sauté shallots in butter until translucent.',
+      'Add chanterelles on high heat until golden.',
+      'Deglaze with white wine, reduce by half.',
+      'Add cream and grate truffle into sauce. Simmer 2 minutes.',
+      'Toss pasta in sauce with pasta water and Parmigiano.',
+      'Plate and shave remaining truffle over generously.'
+    ]
+  },
+  {
+    id: 'mango-lassi',
+    title: 'Fresh Alphonso Mango Lassi',
+    tagline: 'Thick, cold and fragrant — Alphonso mangoes with cardamom yoghurt.',
+    category: 'drinks',
+    subCategory: 'smoothies',
+    difficulty: 'Easy',
+    time: '10 Mins',
+    servings: 2,
+    image: 'https://images.unsplash.com/photo-1527661591475-527312dd65f5?q=80&w=1000&auto=format&fit=crop',
+    isPremium: false,
+    chefNote: 'Only use Alphonso mangoes when in season. Nothing else comes close.',
+    nutrition: { calories: '180 kcal', protein: '6g', carbs: '34g', fat: '3g' },
+    featuredIngredients: ['mango', 'cardamom', 'yoghurt'],
+    ingredients: [
+      { name: 'Alphonso mangoes', amount: '2 peeled and cubed' },
+      { name: 'Full fat yoghurt', amount: '300ml' },
+      { name: 'Whole milk', amount: '100ml' },
+      { name: 'Green cardamom', amount: '4 pods ground' },
+      { name: 'Honey', amount: '1 tbsp' },
+      { name: 'Ice cubes', amount: 'Generous handful' }
+    ],
+    steps: [
+      'Add all ingredients to a blender.',
+      'Blend on high for 60 seconds until completely smooth.',
+      'Taste and adjust sweetness with honey.',
+      'Pour into chilled glasses over ice.',
+      'Garnish with ground cardamom and serve immediately.'
+    ]
+  },
+  {
+    id: 'golden-tonic',
+    title: 'Golden Hour Turmeric Tonic',
+    tagline: 'Cold-pressed blood orange, ginger, turmeric and honeycrisp apple.',
+    category: 'drinks',
+    subCategory: 'tonics',
+    difficulty: 'Easy',
+    time: '10 Mins',
+    servings: 2,
+    image: 'https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?q=80&w=1000&auto=format&fit=crop',
+    isPremium: false,
+    chefNote: 'A morning ritual. Pure light and liquid sunshine.',
+    nutrition: { calories: '120 kcal', protein: '2g', carbs: '28g', fat: '0.5g' },
+    featuredIngredients: ['turmeric', 'ginger', 'blood orange'],
+    ingredients: [
+      { name: 'Blood oranges', amount: '3 peeled' },
+      { name: 'Honeycrisp apples', amount: '2 cored' },
+      { name: 'Fresh ginger root', amount: '3cm piece' },
+      { name: 'Fresh turmeric root', amount: '2cm piece' },
+      { name: 'Lemon', amount: '1/2 peeled' },
+      { name: 'Cayenne pepper', amount: 'Tiny pinch' }
+    ],
+    steps: [
+      'Wash and prep all produce thoroughly.',
+      'Feed all ingredients through a cold press juicer.',
+      'Stir in coconut water to balance sweetness.',
+      'Add a tiny pinch of cayenne and stir.',
+      'Pour over ice spheres and garnish with dehydrated blood orange.'
+    ]
+  },
+  {
+    id: 'chocolate-mousse',
+    title: 'Dark Chocolate & Espresso Mousse',
+    tagline: 'Intensely dark, cloud-light mousse with a shot of espresso folded in.',
+    category: 'desserts',
+    subCategory: 'chocolate',
+    difficulty: 'Intermediate',
+    time: '25 Mins',
+    servings: 4,
+    image: 'https://images.unsplash.com/photo-1511018556340-d16986a1c194?q=80&w=1000&auto=format&fit=crop',
+    isPremium: false,
+    chefNote: 'The espresso does not make it taste like coffee — it makes the chocolate taste more like chocolate.',
+    nutrition: { calories: '380 kcal', protein: '6g', carbs: '28g', fat: '28g' },
+    featuredIngredients: ['dark chocolate', 'espresso', 'egg whites'],
+    ingredients: [
+      { name: '70% dark chocolate', amount: '200g' },
+      { name: 'Double cream', amount: '200ml' },
+      { name: 'Egg whites', amount: '3' },
+      { name: 'Espresso shot', amount: '1 double shot' },
+      { name: 'Caster sugar', amount: '30g' },
+      { name: 'Flaky sea salt', amount: 'Pinch' }
+    ],
+    steps: [
+      'Melt chocolate over bain marie. Stir in espresso. Cool slightly.',
+      'Whip double cream to soft peaks.',
+      'Whisk egg whites with sugar to stiff peaks.',
+      'Fold whipped cream into chocolate until combined.',
+      'Fold in egg whites in two additions — keep it light.',
+      'Divide into glasses. Chill for minimum 2 hours.',
+      'Finish with flaky salt and chocolate shavings before serving.'
+    ]
+  },
+  {
+    id: 'matcha-icecream',
+    title: 'Ceremonial Matcha Ice Cream',
+    tagline: 'No-churn matcha ice cream with a deep, grassy ceremonial grade intensity.',
+    category: 'desserts',
+    subCategory: 'ice-cream',
+    difficulty: 'Easy',
+    time: '20 Mins',
+    servings: 6,
+    image: 'https://images.unsplash.com/photo-1536256263959-770b48d82b0a?q=80&w=1000&auto=format&fit=crop',
+    isPremium: false,
+    chefNote: 'Ceremonial grade matcha only. Culinary grade will taste bitter and dull.',
+    nutrition: { calories: '290 kcal', protein: '4g', carbs: '24g', fat: '20g' },
+    featuredIngredients: ['matcha', 'double cream', 'condensed milk'],
+    ingredients: [
+      { name: 'Ceremonial matcha powder', amount: '3 tsp' },
+      { name: 'Double cream', amount: '400ml' },
+      { name: 'Sweetened condensed milk', amount: '200ml' },
+      { name: 'Vanilla extract', amount: '1 tsp' },
+      { name: 'Pinch of salt', amount: 'Pinch' }
+    ],
+    steps: [
+      'Sift matcha powder into condensed milk. Whisk until completely smooth.',
+      'Add vanilla and salt to matcha mixture.',
+      'Whip double cream to stiff peaks.',
+      'Fold condensed milk mixture into whipped cream gently.',
+      'Pour into a freezer container. Smooth the top.',
+      'Freeze for minimum 6 hours or overnight.',
+      'Scoop and serve with extra matcha dusted on top.'
     ]
   }
 ];

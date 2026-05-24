@@ -16,7 +16,7 @@ export default function RecipeCard({ recipe, onViewDetails, onUnlockClick }: Rec
     desserts: { bg: '#FFF0F5', text: '#C42A6B' },
   };
 
-  const cat = categoryColors[recipe.category] || { bg: '#F5F5F5', text: '#555' };
+  const cat = categoryColors[recipe.mainCategory] || { bg: '#F5F5F5', text: '#555' };
 
   return (
     <div style={{
@@ -56,7 +56,7 @@ export default function RecipeCard({ recipe, onViewDetails, onUnlockClick }: Rec
           letterSpacing: '0.08em', textTransform: 'uppercase',
           padding: '4px 12px', borderRadius: '50px',
         }}>
-          {recipe.category}
+          {recipe.mainCategory}
         </div>
 
         {/* Premium lock overlay */}
