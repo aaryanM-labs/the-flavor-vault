@@ -57,7 +57,9 @@ export interface IngredientSpotlight {
   image: string;
   category: 'herbs' | 'spices' | 'vegetables' | 'fruits' | 'grains' | 'dairy' | 'proteins';
   color: string;
+  recipes: string[];
 }
+
 
 export interface SubscriptionPlan {
   name: string;
