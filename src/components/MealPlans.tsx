@@ -1,4 +1,4 @@
-import { Download, Check, ArrowRight } from 'lucide-react';
+import { Download, Check, } from 'lucide-react';
 
 const PLANS = [
   {
