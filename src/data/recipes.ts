@@ -1025,7 +1025,7 @@ export const RECIPES: any[] = [
 },
 {
   id: 'creamy-mango-smoothie',
-  name: 'Creamy Tropical Mango Smoothie',
+  title: 'Creamy Tropical Mango Smoothie',
   tagline: 'Thick, cold, and sunshine-bright — fresh mango blended with yogurt into the ultimate three-minute summer drink.',
   category: 'drinks',
   subCategory: 'smoothies',
@@ -1053,7 +1053,7 @@ export const RECIPES: any[] = [
 
 {
   id: 'peach-breakfast-smoothie',
-  name: 'Fresh Peach Breakfast Smoothie',
+  title: 'Fresh Peach Breakfast Smoothie',
   tagline: 'Sun-ripened peaches blended with warming cinnamon and ginger — a nourishing morning ritual that comes together in minutes.',
   category: 'drinks',
   subCategory: 'smoothies',
@@ -1086,7 +1086,7 @@ export const RECIPES: any[] = [
 
 {
   id: 'watermelon-cucumber-smoothie',
-  name: 'Watermelon & Cucumber Cooler',
+  title: 'Watermelon & Cucumber Cooler',
   tagline: 'Frozen watermelon blended with crisp cucumber and a squeeze of lime — the most refreshing drink you will make all summer.',
   category: 'drinks',
   subCategory: 'cold-press',
@@ -1116,7 +1116,7 @@ export const RECIPES: any[] = [
 
 {
   id: 'peachy-oat-smoothie',
-  name: 'Peachy Oat Smoothie',
+  title : 'Peachy Oat Smoothie',
   tagline: 'Heart-healthy oats plumped in hot water then blended with ripe summer peaches into a thick, creamy, naturally filling drink.',
   mainCategory: 'drinks',
   subCategory: 'smoothies',
@@ -1147,7 +1147,7 @@ export const RECIPES: any[] = [
 
 {
   id: 'tropical-mango-smoothie',
-  name: 'Mango, Strawberry & Pineapple Smoothie',
+  title: 'Mango, Strawberry & Pineapple Smoothie',
   tagline: 'A vibrant trio of frozen tropical fruits blended with fresh orange juice — pure sunshine in a glass with no added sugar needed.',
   mainCategory: 'drinks',
   subCategory: 'smoothies',
@@ -1174,7 +1174,7 @@ export const RECIPES: any[] = [
 
 {
   id: 'mixed-berry-banana-smoothie',
-  name: 'Mixed Berry & Banana Smoothie',
+  title: 'Mixed Berry & Banana Smoothie',
   tagline: 'Deep purple frozen berries and sweet banana blended with vanilla yogurt into a thick, antioxidant-rich drink ready in five minutes.',
   mainCategory: 'drinks',
   subCategory: 'smoothies',
@@ -1205,7 +1205,7 @@ export const RECIPES: any[] = [
 
 {
   id: 'boiled-matooke',
-  name: 'Classic Boiled Matooke',
+  title: 'Classic Boiled Matooke',
   tagline: 'Tender green bananas simmered with garlic, tomatoes, and onions in the simplest and most satisfying Ugandan preparation.',
   mainCategory: 'ugandan',
   subCategory: 'traditional',
@@ -1240,7 +1240,7 @@ export const RECIPES: any[] = [
 
 {
   id: 'fried-cassava-chips',
-  name: 'Crispy Fried Cassava Chips',
+  title: 'Crispy Fried Cassava Chips',
   tagline: 'Golden, crackling cassava strips seasoned and deep-fried until irresistibly crispy — Uganda\'s answer to the perfect snack.',
   mainCategory: 'ugandan',
   subCategory: 'ugandan-snacks',
@@ -1270,7 +1270,7 @@ export const RECIPES: any[] = [
 
 {
   id: 'cassava-balls',
-  name: 'Fried Cassava Balls',
+  title: 'Fried Cassava Balls',
   tagline: 'Fluffy mashed cassava seasoned with garlic and onion, rolled in breadcrumbs and deep-fried until golden — the ultimate Ugandan party snack.',
   mainCategory: 'ugandan',
   subCategory: 'ugandan-snacks',
@@ -1304,7 +1304,7 @@ export const RECIPES: any[] = [
 
 {
   id: 'kabalagala',
-  name: 'Kabalagala — Ugandan Banana Pancakes',
+  title: 'Kabalagala — Ugandan Banana Pancakes',
   tagline: 'Traditional Ugandan pan-fried cakes made from ripe sukalindizi bananas and cassava flour — crispy outside, soft and fragrant within.',
   mainCategory: 'ugandan',
   subCategory: 'street-food',
@@ -1336,7 +1336,7 @@ export const RECIPES: any[] = [
 
 {
   id: 'simsim-balls',
-  name: 'Simsim Balls',
+  title: 'Simsim Balls',
   tagline: 'Toasted sesame seeds bound in a light caramel syrup and rolled into sweet, crunchy balls — a beloved Ugandan childhood snack.',
   mainCategory: 'ugandan',
   subCategory: 'ugandan-snacks',
@@ -1367,7 +1367,7 @@ export const RECIPES: any[] = [
 
 {
   id: 'chicken-luwombo',
-  name: 'Dressed Chicken Luwombo',
+  title: 'Dressed Chicken Luwombo',
   tagline: 'Uganda\'s most ceremonial dish — whole chicken slow-steamed inside banana leaves with tomatoes, garlic, and potatoes until falling tender.',
   mainCategory: 'ugandan',
   subCategory: 'traditional',
@@ -1408,7 +1408,7 @@ export const RECIPES: any[] = [
 
 {
   id: 'malakwang',
-  name: 'Malakwang — Northern Ugandan Groundnut Greens',
+  title: 'Malakwang — Northern Ugandan Groundnut Greens',
   tagline: 'A sacred dish from the Acholi people — cassava leaves and okra slow-cooked with groundnut paste into a deeply nutritious, culturally rich stew.',
   mainCategory: 'ugandan',
   subCategory: 'traditional',
@@ -1441,7 +1441,7 @@ export const RECIPES: any[] = [
 
 {
   id: 'mashed-sweet-potatoes-uganda',
-  name: 'Ugandan Spiced Mashed Sweet Potatoes',
+  title : 'Ugandan Spiced Mashed Sweet Potatoes',
   tagline: 'Buttery mashed sweet potatoes finished with brown sugar, warm spices, and a bright citrus garnish — comforting and deeply satisfying.',
   mainCategory: 'ugandan',
   subCategory: 'traditional',
@@ -1473,7 +1473,7 @@ export const RECIPES: any[] = [
 
 {
   id: 'akalo-millet-bread',
-  name: 'Akalo — Ugandan Millet Bread',
+  title : 'Akalo — Ugandan Millet Bread',
   tagline: 'Dense, nourishing, and traditionally made — stiff millet porridge cooked into a firm bread that is the cornerstone of northern Ugandan cuisine.',
   mainCategory: 'ugandan',
   subCategory: 'traditional',
@@ -1503,7 +1503,7 @@ export const RECIPES: any[] = [
 
 {
   id: 'omugoyo',
-  name: 'Omugoyo — Sweet Potato & Bean Cake',
+  title: 'Omugoyo — Sweet Potato & Bean Cake',
   tagline: 'An ancient Ugandan dish from the central region — mashed sweet potatoes and beans combined, wrapped in banana leaf and steamed into a nourishing traditional cake.',
   mainCategory: 'ugandan',
   subCategory: 'traditional',
@@ -1538,7 +1538,7 @@ export const RECIPES: any[] = [
 
 {
   id: 'obushera-fermented',
-  name: 'Obushera — Fermented Sorghum Drink',
+  title: 'Obushera — Fermented Sorghum Drink',
   tagline: 'Uganda\'s ancient probiotic beverage from the south-western highlands — fermented sorghum or millet with wood ash, naturally sweet and deeply nourishing.',
   mainCategory: 'ugandan',
   subCategory: 'ugandan-drinks',
