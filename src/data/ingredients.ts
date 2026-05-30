@@ -176,4 +176,5 @@ export const INGREDIENTS: IngredientSpotlight[] = [
     color: '#D97706',
     recipes: ['Brown Butter Cookies', 'Beurre Blanc', 'Butter Chicken', 'Croissants', 'Hollandaise']
   },
+ 
 ];
